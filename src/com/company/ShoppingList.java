@@ -23,6 +23,8 @@ public class ShoppingList {
             }
         }
     }
+
+
     public void modifyItem (int position, String newName){
         shopingList.set(position-1, newName);
         System.out.println((position+1) + ". Item has been removed.");
@@ -31,12 +33,10 @@ public class ShoppingList {
     public void removeItem (int position){
         shopingList.remove(position-1);
     }
+
+
     // This code is for searching items through the list.
-    public String gotoItem (String seekItem){
-        int position = shopingList.indexOf(seekItem);
-        if (position >= 0){
-            return shopingList.get(position);
-        }
-        return null;
+    public int gotoItem (String seekItem){
+        return shopingList.indexOf(seekItem);
     }
 }
