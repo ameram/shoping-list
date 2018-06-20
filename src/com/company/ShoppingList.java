@@ -55,4 +55,15 @@ public class ShoppingList {
     public int gotoItem (String seekItem){
         return shopingList.indexOf(seekItem);
     }
+
+    // Checking for an item on the list.
+    public boolean existsQ (String qItem){
+        int position = gotoItem(qItem);
+        if (position >= 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
