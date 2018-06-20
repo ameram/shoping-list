@@ -25,12 +25,28 @@ public class ShoppingList {
     }
 
 
-    public void modifyItem (int position, String newName){
+    public void modifyItem (String newItem){
+        int position = gotoItem(newItem);
+        if (position >= 0){
+            modifyItem(position, newItem);
+        }
+    }
+
+    private void modifyItem (int position, String newName){
         shopingList.set(position-1, newName);
         System.out.println((position+1) + ". Item has been removed.");
     }
+
+
+    // Remove part:
+    public void removeItem (String removeItem){
+        int position = gotoItem(removeItem);
+        if (position >= 0){
+            removeItem(position);
+        }
+    }
     // This is code for removing item from the list with position.
-    public void removeItem (int position){
+    private void removeItem (int position){
         shopingList.remove(position-1);
     }
 
