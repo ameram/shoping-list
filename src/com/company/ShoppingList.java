@@ -25,8 +25,8 @@ public class ShoppingList {
     }
 
 
-    public void modifyItem (String newItem){
-        int position = gotoItem(newItem);
+    public void modifyItem (String oldItem, String newItem){
+        int position = gotoItem(oldItem);
         if (position >= 0){
             modifyItem(position, newItem);
         }
